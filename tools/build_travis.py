@@ -33,6 +33,9 @@ build_list = [
     {
     "STM":
         (
+        
+        { "target": "BIRDIE1_L462CE",    "toolchains": "GCC_ARM", "libs": ["dsp"] },
+
         { "target": "B96B_F446VE",       "toolchains": "GCC_ARM", "libs": ["dsp"] },
         { "target": "NUCLEO_L053R8",     "toolchains": "GCC_ARM", "libs": ["dsp"] },
         { "target": "MTB_RAK811",        "toolchains": "GCC_ARM"},
@@ -214,6 +217,11 @@ linking_list = [
 
     {
         "STM": (
+            {"target": "BIRDIE1_L462CE",
+             "toolchains": "GCC_ARM",
+             "tests": {""     : ["MBED_2", "MBED_10", "MBED_11", "MBED_16"],
+                     }
+            },    
             {"target": "NUCLEO_F446RE",
              "toolchains": "GCC_ARM",
              "tests": {""     : ["MBED_2", "MBED_10", "MBED_11", "MBED_16"],
